@@ -1,0 +1,23 @@
+{
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  ecmaFeatures: {
+    jsx: true
+  },
+  "globals": {
+    "clearInteral"
+  },
+  "plugins": [
+  ],
+  "extends": "eslint-config-airbnb",
+  "rules": {
+    "comma-dangle": 0,
+    "no-console": 0,
+    "id-length": 0,
+    "react/prop-types": 0,
+    "react/jsx-first-prop-new-line": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
