@@ -1,14 +1,21 @@
 var path = require('path')
 var config = require('../config')
 var projectRoot = path.resolve(__dirname, '../')
+var config = require('../config')
 
+// TODO: should update webpack@1.x to webpack2 and change some configure
+// TODO: find out how 'to use fallback'
+// TODO: use 'cssnano' to config style loader with postcss
 module.exports = {
+  name: 'client',
+  target: 'web',
   entry: {
-    app: './src/main.js'
+    app: config.entry
   },
   output: {
     path: config.build.assetsRoot,
     publicPath: config.build.assetsPublicPath,
+    chunkFilename: '[chunkhash].js',
     filename: '[name].[hash].js'
   },
   resolve: {
@@ -55,6 +62,11 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      // TODO: should config some global via
+    }),
+  ],
   eslint: {
     formatter: require('eslint-friendly-formatter')
   }

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Ha from './pages/Ha';
-import './assets/style/base.scss';
 
 class App extends Component {
   constructor(props) {
@@ -15,9 +13,8 @@ class App extends Component {
   render() {
     return (
       <div className="haha">
-        WEBPACK REACT q
+        WEBPACK REACT 1sss
         {this.state.data.a}
-        <Ha />
       </div>
     );
   }
